@@ -1,0 +1,52 @@
+$width: 700px;
+
+.people {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap;
+  @media only screen and (min-width: $width) {
+    width: 50%;
+    flex-direction: row;
+  }
+  &__item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 180px;
+    flex-direction: row;
+    @media only screen and (min-width: $width) {
+      width: 50%;
+      flex-direction: row;
+    }
+    &:nth-child(4n + 1) {
+      background-color: teal;
+    }
+    &:nth-child(4n + 2) {
+      background-color: greenyellow;
+    }
+    &:nth-child(4n + 3) {
+      background-color: palegoldenrod;
+    }
+    &:nth-child(4n + 4) {
+      background-color: firebrick;
+    }
+
+    &-value {
+      padding: 1rem;
+    }
+  }
+}
+
+.form {
+  margin: 3rem auto 0;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  &__input {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+}
